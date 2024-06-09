@@ -35,11 +35,11 @@ genre = st.radio(
 # st.write("You selected:", genre)
 
 if genre == 'Maxim':
-    st.write(f"'You selected : {content} form {Maxim}.')
+    st.write(f"You selected : {content} form {Maxim}.")
 elif genre == '3 line poem':
-    st.write(f"'You selected : {content} form {3 line poem}.')
+    st.write(f"You selected : {content} form {3 line poem}.")
 elif genre == 'Funny':
-    st.write(f"'You selected : {content} form {Fun Story}.')
+    st.write(f"You selected : {content} form {Fun Story}.")
 
 if st.button('Request to chatGPT'):
     with st.spinner("Making a request to chatGPT"):
