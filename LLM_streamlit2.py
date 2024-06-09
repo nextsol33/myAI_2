@@ -1,7 +1,6 @@
 # 프론트앤드 연결하기
 # streamlit.io
 # pip install streamlit
-# pip install langchain_community # install the missing module
 # Docs-Install-Get Started에서 예제 샘플로 구현
 # API reference에서 사용법 참고
 
