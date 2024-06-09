@@ -48,5 +48,5 @@ if st.button('Request to chatGPT'):
         elif genre == 'Bible_verse':
             result = chat_model.predict("Let me know a Bible verse about " + content + " in korean")
         elif genre == 'Funny':
-            result = chat_model.predict("Tell me about humor in 500 characters about " + content + " in korean")
+            result = chat_model.predict("Make me about humorous in 500 characters about " + content + " in korean")
         st.write(result)
