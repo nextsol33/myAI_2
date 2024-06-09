@@ -28,7 +28,7 @@ content = st.text_input("Please enter the topic you would like to TALK")
 
 genre = st.radio(
     "What's your favorite topic?",
-    ["Maxim", "3_line_poem", "Funny"],
+    ["Maxim", "Bible_verse", "Funny"],
     index=None,
 )
 
@@ -36,17 +36,17 @@ genre = st.radio(
 
 if genre == 'Maxim':
     st.write(f"You selected : Maxim of {content}.")
-elif genre == '3 line poem':
-    st.write(f"You selected : 3_line_poem of {content}.")
+elif genre == 'Bible_verse':
+    st.write(f"You selected : Bible verse of {content}.")
 elif genre == 'Funny':
     st.write(f"You selected : Funny stroy of {content}.")
 
 if st.button('Request to chatGPT'):
     with st.spinner("Making a request to chatGPT"):
         if genre == 'Maxim':
-            result = chat_model.predict("Tell me 5 maxims about " + content)
-        elif genre == '3_line_poem':
-            result = chat_model.predict("Write a three-line poem about " + content)
+            result = chat_model.predict("Tell me 5 maxims about " + content + "with source in korean")
+        elif genre == 'Bible_verse':
+            result = chat_model.predict("Let me know a Bible verse about " + content + "in korean")
         elif genre == 'Funny':
-            result = chat_model.predict("Tell me about humor in 200 characters about " + content)
+            result = chat_model.predict("Tell me about humor in 200 characters about " + content + "in korean")
         st.write(result)
