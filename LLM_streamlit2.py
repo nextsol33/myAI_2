@@ -20,34 +20,34 @@ chat_model = ChatOpenAI()
 
 import streamlit as st
 
-st.title('GPT와 대화 - made by KBN')
+st.title('Talk to chtGPT - made by KBN')
 
-content = st.text_input("주제를 입력해주세요.")
-# st.write(f"대화의 주제는 {content}입니다")
+content = st.text_input("Please enter the topic you would like to TALK")
+# st.write(f"Topic is {content}.")
 
 
 genre = st.radio(
     "What's your favorite topic?",
-    ["Breave", "Wisdom", "Funny"],
+    ["Maxim", "3 line poem", "Funny"],
     index=None,
 )
 
 # st.write("You selected:", genre)
 
-if genre == 'Breave':
-    st.write('You selected : Breave.')
-elif genre == 'Wisdom':
-    st.write('You selected : Wisdom.')
+if genre == 'Maxim':
+    st.write(f"'You selected : {content} form {Maxim}.')
+elif genre == '3 line poem':
+    st.write(f"'You selected : {content} form {3 line poem}.')
 elif genre == 'Funny':
-    st.write('You selected : Funny.')
+    st.write(f"'You selected : {content} form {Fun Story}.')
 
-if st.button('GPT에 요청하기'):
-    with st.spinner("요청을 수행하는 중..."):
-        if genre == 'Breave':
-            result = chat_model.predict(content + "에 대해 명언을 알려줘")
-        elif genre == 'Wisdom':
-            result = chat_model.predict(content + "에 대해 3행시를 지어줘")
+if st.button('Request to chatGPT'):
+    with st.spinner("Making a request to chatGPT"):
+        if genre == 'Maxim':
+            result = chat_model.predict("Tell me 5 maxims about " + content)
+        elif genre == '3 line poem':
+            result = chat_model.predict("Write a three-line poem about " + content)
         elif genre == 'Funny':
-            result = chat_model.predict(content + "에 대해 유머스런 이야기를 만들어해줘.")
+            result = chat_model.predict("Make a humorous story with " + content)
         st.write(result)
 
