@@ -20,7 +20,7 @@ chat_model = ChatOpenAI()
 
 import streamlit as st
 
-st.title('Talk to chtaGPT - made by KBN')
+st.title('Talk to chatGPT with chatting - made by KBN')
 
 content = st.text_input("Please enter the topic you would like to TALK")
 # st.write(f"Topic is {content}.")
