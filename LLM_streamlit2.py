@@ -39,7 +39,7 @@ if genre == 'Maxim':
 elif genre == 'Bible_verse':
     st.write(f"You selected : Bible verse of {content}.")
 elif genre == 'Funny':
-    st.write(f"You selected : Funny stroy of {content}.")
+    st.write(f"You selected : Funny story of {content}.")
 
 if st.button('Request to chatGPT'):
     with st.spinner("Making a request to chatGPT"):
