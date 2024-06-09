@@ -20,7 +20,7 @@ chat_model = ChatOpenAI()
 
 import streamlit as st
 
-st.title('Talk to chtGPT - made by KBN')
+st.title('Talk to chtaGPT - made by KBN')
 
 content = st.text_input("Please enter the topic you would like to TALK")
 # st.write(f"Topic is {content}.")
@@ -44,9 +44,9 @@ elif genre == 'Funny':
 if st.button('Request to chatGPT'):
     with st.spinner("Making a request to chatGPT"):
         if genre == 'Maxim':
-            result = chat_model.predict("Tell me 5 maxims about " + content + "with source in korean")
+            result = chat_model.predict("Tell me 5 maxims about " + content + " with source in korean")
         elif genre == 'Bible_verse':
-            result = chat_model.predict("Let me know a Bible verse about " + content + "in korean")
+            result = chat_model.predict("Let me know a Bible verse about " + content + " in korean")
         elif genre == 'Funny':
-            result = chat_model.predict("Tell me about humor in 200 characters about " + content + "in korean")
+            result = chat_model.predict("Tell me about humor in 200 characters about " + content + " in korean")
         st.write(result)
