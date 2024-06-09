@@ -28,7 +28,7 @@ content = st.text_input("Please enter the topic you would like to TALK")
 
 genre = st.radio(
     "What's your favorite topic?",
-    ["Maxim", "3 line poem", "Funny"],
+    ["Maxim", "3_line_poem", "Funny"],
     index=None,
 )
 
@@ -37,7 +37,7 @@ genre = st.radio(
 if genre == 'Maxim':
     st.write(f"You selected : {content} form {Maxim}.")
 elif genre == '3 line poem':
-    st.write(f"You selected : {content} form {3 line poem}.")
+    st.write(f"You selected : {content} form {3_line_poem}.")
 elif genre == 'Funny':
     st.write(f"You selected : {content} form {Fun Story}.")
 
