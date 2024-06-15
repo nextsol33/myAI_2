@@ -28,7 +28,7 @@ content = st.text_input("Please enter the topic you would like to TALK")
 
 genre = st.radio(
     "What's your favorite topic?",
-    ["Maxim", "Bible_verse", "Funny"],
+    ["Chatting", "Maxim", "Bible_verse", "Funny"],
     index=None,
 )
 
@@ -43,6 +43,8 @@ elif genre == 'Funny':
 
 if st.button('Request to chatGPT'):
     with st.spinner("Making a request to chatGPT"):
+        if genre == 'Chatting':
+            result = chat_model.predict(content)
         if genre == 'Maxim':
             result = chat_model.predict("Tell me 5 maxims about " + content + " with source in korean")
         elif genre == 'Bible_verse':
