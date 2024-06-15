@@ -35,6 +35,8 @@ genre = st.radio(
 # st.write("You selected:", genre)
 
 if genre == 'Maxim':
+    st.write(f"You selected : Chatting of {content}.")
+elif genre == 'Maxim':
     st.write(f"You selected : Maxim of {content}.")
 elif genre == 'Bible_verse':
     st.write(f"You selected : Bible verse of {content}.")
@@ -45,7 +47,7 @@ if st.button('Request to chatGPT'):
     with st.spinner("Making a request to chatGPT"):
         if genre == 'Chatting':
             result = chat_model.predict(content)
-        if genre == 'Maxim':
+        elif genre == 'Maxim':
             result = chat_model.predict("Tell me 5 maxims about " + content + " with source in korean")
         elif genre == 'Bible_verse':
             result = chat_model.predict("Let me know a Bible verse about " + content + " in korean")
