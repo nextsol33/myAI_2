@@ -22,7 +22,7 @@ import streamlit as st
 
 st.title('Talk to chatGPT with chatting - made by KBN')
 
-content = st.text_input("Please enter the topic you would like to TALK")
+content = st.text_input("Please enter the topic you would like to Talk")
 # st.write(f"Topic is {content}.")
 
 
